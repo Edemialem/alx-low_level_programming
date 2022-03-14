@@ -20,7 +20,7 @@ else if (n == 0)
 }
 else
 {
-	printf("%d is negative\n", n);
+printf("%d is negative\n", n);
 }
 return (0);
 }
