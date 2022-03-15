@@ -8,17 +8,14 @@
 
 int main(void)
 {
-
 int i, e, g;
 i = 48;
 e = 48;
 g = 48;
-
 while (e < 58)
 
 {
 i = 48;
-
 while (i < 58)
 
 {
