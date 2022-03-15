@@ -22,7 +22,6 @@ if (i != 57)
 
 putchar(',');
 putchar(' ');
-
 }											
 
 }
