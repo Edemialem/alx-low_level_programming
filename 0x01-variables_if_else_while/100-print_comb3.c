@@ -22,12 +22,12 @@ while (i < 58)
 
 {
 
-if (e != i && e < i)																	
-{
-																			
+if (e != i && e < i)
+
+{	
+																	
 putchar(e);																		
-putchar(i);
-																			
+putchar(i);																		
 if (i == 57 && e == 56)
 
 {																																							
