@@ -36,7 +36,8 @@ break;
 }
 
 putchar(',');
-putchar('');																		
+
+putchar(' ');																		
 }
 i++;
 }
