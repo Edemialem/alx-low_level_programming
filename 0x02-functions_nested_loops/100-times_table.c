@@ -10,7 +10,7 @@
  * @n: int type number
  */
 
-void print_times_table(int n)
+void times_table(void)
 
 {
 		int x = 0, y, z;
