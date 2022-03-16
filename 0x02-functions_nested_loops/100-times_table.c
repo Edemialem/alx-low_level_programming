@@ -12,7 +12,6 @@
 
 void times_table(void)
 
-{
 		int x = 0, y, z;
 
 			if (n > 15 || n < 0)
