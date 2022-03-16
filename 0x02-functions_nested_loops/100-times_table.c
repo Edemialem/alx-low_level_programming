@@ -10,12 +10,13 @@
  * @n: int type number
  */
 
-void times_table(void)
+void print_times_table(int n)
 
 		int x = 0, y, z;
 
 			if (n > 15 || n < 0)
-						return;
+
+				return;
 
 				while (x <= n)
 
@@ -25,14 +26,12 @@ void times_table(void)
 													{
 
 			z = x * y;
-
-												if (z > 99)
+			
+		if (z > 99)
 												{
-
 		_putchar(z / 100 + '0');
 		_putchar((z / 10 % 10) + '0');
 		_putchar(z % 10 + '0');
-
 		}																				else if (z > 9)																				{
 
 			_putchar(' ');									_putchar(z / 10 + '0');
@@ -41,11 +40,9 @@ void times_table(void)
 												else if (y != 0)
 
 			{
-
 			_putchar(' ');
 			_putchar(' ');
 			_putchar(z + '0');
-
 			}
 			else
 				
@@ -54,12 +51,9 @@ void times_table(void)
 			if (y != n)
 
 			{
-
 			_putchar(',');
 			_putchar(' ');
 			}
-			}
-													_putchar('\n');
-			x++;
-													}
+			}										_putchar('\n');
+			x++;										}
 			}
