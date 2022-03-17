@@ -5,17 +5,20 @@
  */
 int main(void)
 
-{
-
-int i;
 
 
-i = 98;
-positive_or_negative(i);
+	int i;
+
+	i = 0;
 
 
 
-return (0);
+	positive_or_negative(i);
 
 
-}
+
+	return (0);
+
+
+
+	}
