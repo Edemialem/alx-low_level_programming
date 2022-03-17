@@ -17,8 +17,6 @@ void more_numbers(void)
 
 	int result;
 
-
-
 	i = 0;
 
 	result = 0;
@@ -34,12 +32,9 @@ void more_numbers(void)
 			if (result < 10)
 
 			{
-
 				second_number = result;
 
 			}
-
-
 
 			else
 
@@ -53,11 +48,7 @@ void more_numbers(void)
 
 			}
 
-
-
 			_putchar (second_number + '0');
-
-
 
 			result++;
 
@@ -70,7 +61,4 @@ void more_numbers(void)
 		_putchar ('\n');
 
 	}
-
-
-
 }
