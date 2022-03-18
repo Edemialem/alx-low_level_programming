@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *print_number - Function that prints an integer.
+ * print_number - Function that prints an integer.
  *   @n: int type number
  *    Description: Can only use _putchar to print.
  */
@@ -44,15 +44,14 @@ while (c)
 										if (m == 1)
 										{
 										_putchar(num % 10 + '0')
-											
-					num = -1;
-																				}
+num = -1;
+}
 										else
-																				{
+										{
 		
 _putchar((num / m % 10) + '0');
-																				m /= 10;
-																				}
-										}
-								
+
+m /= 10;
+}
+}						
 }
