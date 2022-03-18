@@ -1,57 +1,87 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * print_number - Function that prints an integer.
- *   @n: int type number
- *    Description: Can only use _putchar to print.
- */
+ *
+ *  * print_number - prints an integer
+ *
+ *   * @na: integer to print
+ *
+ *    * Return: nothing
+ *
+ *     */
 
-void print_number(int n)
-
-{
-
-long m; /* power of 10 */
-
-int c; /* boolean check */
-
-long num; /* convert int to long */
-num = n;
-
-/* negatives */
-
-if (num < 0)
-{
-num *= -1;
-_putchar('-');
-}
-
-/* count up */
-
-m = 1;
-
-c = 1;
-
-while (c)
-										{
-										if (num / (m * 10) > 0)
-										m *= 10;
-										else																				c = 0;
-
-}										/* count down */
-										while (num >= 0)
+void print_number(int na)
 
 {
-										if (m == 1)
-										{
-										_putchar(num % 10 + '0')
-num = -1;
-}
-										else
-										{
-		
-_putchar((num / m % 10) + '0');
 
-m /= 10;
-}
-}						
+		unsigned int pc, i, z, nmodul, n;
+
+
+
+			if (na == 0)
+
+						_putchar('0');
+
+				/* if n is negative we make it positive*/
+
+				if (na < 0)
+
+						{
+
+									n = -na;
+
+											_putchar('-');
+
+												}
+
+					else
+
+								n = na;
+
+						if (n < 10 && n > 0)
+
+									_putchar(n + '0');
+
+							while (n >= 10)
+
+									{
+
+												pc = n;
+
+														z = 0;
+
+																nmodul = 0;
+
+																		for (i = 0; pc >= 10; i++)
+
+																					{
+
+																									if (pc / 10 > 0 && pc % 10 == 0)
+
+																														z++;
+
+																												else
+
+																																	z = 0;
+
+																															pc /= 10;
+
+																																		nmodul =  (nmodul) ? nmodul * 10 : 10;
+
+																																				}
+
+																				_putchar(pc + '0');
+
+																						while (z-- > 0)
+
+																										_putchar('0');
+
+																								n %= nmodul;
+
+																										if (n > 0 && n < 10)
+
+																														_putchar(n + '0');
+
+																											}
+
 }
