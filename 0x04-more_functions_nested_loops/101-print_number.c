@@ -1,87 +1,76 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- *
- *  * print_number - prints an integer
- *
- *   * @na: integer to print
- *
- *    * Return: nothing
- *
- *     */
+ *   print_number - prints an integer
+ *   @na: integer to print
+ *    Return: nothing
+ */
 
 void print_number(int na)
 
 {
-
 		unsigned int pc, i, z, nmodul, n;
 
+if (na == 0)
+						
+_putchar('0');
 
+/* if n is negative we make it positive*/
 
-			if (na == 0)
+if (na < 0)
 
-						_putchar('0');
+{
 
-				/* if n is negative we make it positive*/
+n = -na;
+_putchar('-');
 
-				if (na < 0)
+}
 
-						{
+else
 
-									n = -na;
+n = na;
 
-											_putchar('-');
+if (n < 10 && n > 0)
 
-												}
+_putchar(n + '0');
 
-					else
+while (n >= 10)
 
-								n = na;
+{
 
-						if (n < 10 && n > 0)
+pc = n;
 
-									_putchar(n + '0');
+z = 0;
 
-							while (n >= 10)
+nmodul = 0;
 
-									{
+for (i = 0; pc >= 10; i++)
 
-												pc = n;
+{
 
-														z = 0;
+if (pc / 10 > 0 && pc % 10 == 0)
 
-																nmodul = 0;
+z++;
 
-																		for (i = 0; pc >= 10; i++)
+else
+z = 0;
 
-																					{
+pc /= 10;
+nmodul =  (nmodul) ? nmodul * 10 : 10;
 
-																									if (pc / 10 > 0 && pc % 10 == 0)
+}
 
-																														z++;
+_putchar(pc + '0');
 
-																												else
+while (z-- > 0)
 
-																																	z = 0;
+_putchar('0');
 
-																															pc /= 10;
+n %= nmodul;
 
-																																		nmodul =  (nmodul) ? nmodul * 10 : 10;
+if (n > 0 && n < 10)
 
-																																				}
+_putchar(n + '0');
 
-																				_putchar(pc + '0');
-
-																						while (z-- > 0)
-
-																										_putchar('0');
-
-																								n %= nmodul;
-
-																										if (n > 0 && n < 10)
-
-																														_putchar(n + '0');
-
-																											}
-
+}
 }
