@@ -10,9 +10,9 @@
 
 int main(int argc, char *argv[])
 {
-/*Declaring variables*/
+
 int position, total, change, aux;
-int coins[] = {25, 10, 5, 2, 1}; /*Array int*/
+int coins[] = {25, 10, 5, 2, 1};
 
 position = total = change = aux = 0;
 
@@ -22,7 +22,7 @@ printf("Error\n");
 return (1);
 }
 
-total = atoi(argv[1]); /*Covert str to int*/
+total = atoi(argv[1]);
 
 if (total <= 0)
 {
@@ -30,7 +30,6 @@ printf("0\n");
 return (0);
 }
 
-/*Declaring While*/
 
 while (coins[position] != '\0')
 
@@ -49,4 +48,3 @@ position++;
 printf("%d\n", change);
 return (0);
 }
-© 2022 Git
